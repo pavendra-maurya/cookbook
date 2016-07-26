@@ -33,4 +33,4 @@ bash "untar stdrc" do
   EOH
   not_if { ::File.exists?(extract_path) }
 end
-
+#not_if { ::File.exists?("#{node[:simple_cb][:the_dirname]}/#{extract_path}") }
